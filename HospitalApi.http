@@ -1,0 +1,23 @@
+@HospitalApi_HostAddress = http://localhost:5055
+
+GET {{HospitalApi_HostAddress}}/api/patients?search=an
+Accept: application/json
+
+POST {{HospitalApi_HostAddress}}/api/patients/90010112345/bedassignments
+Content-Type: application/json
+
+{
+  "from": "2026-05-20T14:00:00",
+  "to": "2026-05-30T10:00:00",
+  "bedType": "Standard",
+  "ward": "Kardiologia"
+}
+
+POST {{HospitalApi_HostAddress}}/api/patients/85050567890/bedassignments
+Content-Type: application/json
+
+{
+  "from": "2026-06-01T09:00:00",
+  "bedType": "Intensywna terapia",
+  "ward": "Chirurgia"
+}
